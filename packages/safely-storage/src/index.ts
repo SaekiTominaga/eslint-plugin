@@ -1,5 +1,5 @@
 import fs from 'node:fs';
-import type { ESLint } from 'eslint';
+import type { ESLint, Linter } from 'eslint';
 import ruleTryCatch from './rules/tryCatch.js';
 
 interface PackageJson {
@@ -7,9 +7,11 @@ interface PackageJson {
 	version: string;
 }
 
+type PluginConfigs = Record<string, Linter.Config[]>;
+
 const { name, version } = JSON.parse((await fs.promises.readFile('./package.json')).toString()) as PackageJson;
 
-const plugin: ESLint.Plugin = {
+const plugin: Omit<ESLint.Plugin, 'configs'> & { configs: PluginConfigs } = {
 	meta: {
 		name: name,
 		version: version,
@@ -20,7 +22,7 @@ const plugin: ESLint.Plugin = {
 	},
 };
 
-const configs: ESLint.Plugin['configs'] = {
+const configs: PluginConfigs = {
 	default: [
 		{
 			plugins: {
@@ -33,6 +35,6 @@ const configs: ESLint.Plugin['configs'] = {
 	],
 };
 
-Object.assign(plugin.configs!, configs);
+Object.assign(plugin.configs, configs);
 
 export default plugin;
