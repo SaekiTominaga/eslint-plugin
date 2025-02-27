@@ -26,10 +26,10 @@ const configs: PluginConfigs = {
 	default: [
 		{
 			plugins: {
-				'eslint-plugin-safely-storage': plugin,
+				'safely-storage': plugin,
 			},
 			rules: {
-				'eslint-plugin-safely-storage/try-catch': 'error',
+				'safely-storage/try-catch': 'error',
 			},
 		},
 	],
