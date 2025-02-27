@@ -6,9 +6,8 @@
 		"js-lint": "eslint packages/*/src/**/*.ts",
 		"yaml-lint": "yamllint .github/workflows/*.yml"
 	},
-	"dependencies": {
-	},
 	"devDependencies": {
+		"@types/node": "^22.13.5",
 		"@w0s/eslint-config": "^8.3.0",
 		"@w0s/tsconfig": "^1.5.1",
 		"eslint": "^9.21.0",

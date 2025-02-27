@@ -1,0 +1,43 @@
+{
+	"name": "eslint-plugin-safely-storage",
+	"version": "1.0.0",
+	"description": "Use `try`...`catch` for Web Storage API for increase safety",
+	"keywords": [
+		"eslint",
+		"eslintplugin",
+		"eslint-plugin"
+	],
+	"homepage": "https://github.com/SaekiTominaga/eslint-plugin#readme",
+	"bugs": {
+		"url": "https://github.com/SaekiTominaga/eslint-plugin/issues"
+	},
+	"license": "MIT",
+	"author": "Saeki Tominaga",
+	"files": [
+		"dist/**/*.d.ts",
+		"!dist/**/*.test.d.ts",
+		"dist/**/*.js",
+		"!dist/**/*.test.js"
+	],
+	"type": "module",
+	"main": "dist/index.js",
+	"module": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SaekiTominaga/eslint-plugin.git"
+	},
+	"scripts": {
+		"build": "tsc",
+		"watch": "tsc -w",
+		"lint": "eslint src/**/*.ts",
+		"pretest": "npm run build",
+		"test": "node --experimental-test-coverage --test **/*.test.js"
+	},
+	"peerDependencies": {
+		"eslint": "^9.0.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

@@ -9,8 +9,9 @@ export default [
 		ignores: ['packages/*/dist'],
 	},
 	{
-		files: ['packages/*/src/**/*.ts'],
+		files: ['packages/*/src/index.ts'],
 		rules: {
+			'@typescript-eslint/no-non-null-assertion': 'off', // plugin.configs
 		},
 	},
 ];
