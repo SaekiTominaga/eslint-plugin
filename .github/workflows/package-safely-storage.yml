@@ -1,8 +1,6 @@
 name: safely-storage
 on:
   pull_request:
-    branches:
-      - main
     paths:
       - 'packages/safely-storage/src/**/*.ts'
   workflow_dispatch:
