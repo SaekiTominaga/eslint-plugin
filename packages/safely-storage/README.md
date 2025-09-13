@@ -1,7 +1,7 @@
 # eslint-plugin-safely-storage
 
 [![npm version](https://badge.fury.io/js/eslint-plugin-safely-storage.svg)](https://www.npmjs.com/package/eslint-plugin-safely-storage)
-[![Workflow status](https://github.com/SaekiTominaga/eslint-plugin/actions/workflows/safely-storage.yml/badge.svg)](https://github.com/SaekiTominaga/eslint-plugin/actions/workflows/safely-storage.yml)
+[![Workflow status](https://github.com/SaekiTominaga/eslint-plugin/actions/workflows/package-safely-storage.yml/badge.svg)](https://github.com/SaekiTominaga/eslint-plugin/actions/workflows/package-safely-storage.yml)
 
 ## Summary
 
