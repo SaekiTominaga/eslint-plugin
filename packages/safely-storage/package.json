@@ -15,9 +15,7 @@
 	"author": "Saeki Tominaga",
 	"files": [
 		"dist/**/*.d.ts",
-		"!dist/**/*.test.d.ts",
-		"dist/**/*.js",
-		"!dist/**/*.test.js"
+		"dist/**/*.js"
 	],
 	"type": "module",
 	"main": "dist/index.js",
@@ -28,11 +26,11 @@
 		"url": "git+https://github.com/SaekiTominaga/eslint-plugin.git"
 	},
 	"scripts": {
+		"prebuild": "rimraf dist/* -g",
 		"build": "tsc",
 		"watch": "tsc -w",
 		"lint": "eslint src/**/*.ts",
-		"pretest": "npm run build",
-		"test": "node --experimental-test-coverage --test **/*.test.js"
+		"test": "node --experimental-test-coverage --test src/**/*.test.ts"
 	},
 	"peerDependencies": {
 		"eslint": "^9.0.0"

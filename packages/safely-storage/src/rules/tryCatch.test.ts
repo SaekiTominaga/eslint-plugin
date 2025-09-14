@@ -1,5 +1,5 @@
 import { RuleTester } from 'eslint';
-import rule from './tryCatch.js';
+import rule from './tryCatch.ts';
 
 const ruleTester = new RuleTester();
 

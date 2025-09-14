@@ -1,5 +1,5 @@
 import type { Rule } from 'eslint';
-import { wrappedTry } from '../util/node.js';
+import { wrappedTry } from '../util/node.ts';
 
 const rule: Rule.RuleModule = {
 	meta: {
