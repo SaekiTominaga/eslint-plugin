@@ -2,6 +2,6 @@
 	"extends": "@w0s/tsconfig",
 	"compilerOptions": {
 		/* Emit */
-		"declaration": true,
+		"declaration": true
 	}
 }

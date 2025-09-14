@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import type { ESLint, Linter } from 'eslint';
-import ruleTryCatch from './rules/tryCatch.js';
+import ruleTryCatch from './rules/tryCatch.ts';
 
 interface PackageJson {
 	name: string;
