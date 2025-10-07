@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - 'packages/safely-storage/src/**/*.ts'
+      - 'packages/safely-storage/package.json'
   workflow_dispatch:
 
 permissions: {}
