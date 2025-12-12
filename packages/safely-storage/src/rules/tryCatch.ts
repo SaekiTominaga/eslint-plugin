@@ -13,21 +13,12 @@ const rule: Rule.RuleModule = {
 		return {
 			Identifier(node) {
 				switch (node.name) {
-					case 'sessionStorage': {
-						if (!wrappedTry(node)) {
-							context.report({
-								node: node,
-								messageId: 'sessionStorage',
-							});
-						}
-
-						break;
-					}
+					case 'sessionStorage':
 					case 'localStorage': {
 						if (!wrappedTry(node)) {
 							context.report({
 								node: node,
-								messageId: 'localStorage',
+								messageId: node.name,
 							});
 						}
 
