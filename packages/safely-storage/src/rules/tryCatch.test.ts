@@ -3,9 +3,6 @@ import rule from './tryCatch.ts';
 
 const ruleTester = new RuleTester();
 
-const messageSessionStorage = 'Access to `sessionStorage` can cause an exception, so be sure to use it with try...catch';
-const messageLocalStorage = 'Access to `localStorage` can cause an exception, so be sure to use it with try...catch';
-
 ruleTester.run('storage-try-catch', rule, {
 	valid: [
 		{
@@ -49,7 +46,7 @@ sessionStorage;
 `,
 			errors: [
 				{
-					message: messageSessionStorage,
+					message: rule.meta?.messages?.['sessionStorage']!,
 				},
 			],
 		},
@@ -60,7 +57,7 @@ localStorage.setItem('key', 'value');
 `,
 			errors: [
 				{
-					message: messageLocalStorage,
+					message: rule.meta?.messages?.['localStorage']!,
 				},
 			],
 		},
@@ -71,7 +68,7 @@ const mySessionStorage = sessionStorage;
 `,
 			errors: [
 				{
-					message: messageSessionStorage,
+					message: rule.meta?.messages?.['sessionStorage']!,
 				},
 			],
 		},
@@ -83,7 +80,7 @@ myLocalStorage = localStorage;
 `,
 			errors: [
 				{
-					message: messageLocalStorage,
+					message: rule.meta?.messages?.['localStorage']!,
 				},
 			],
 		},
