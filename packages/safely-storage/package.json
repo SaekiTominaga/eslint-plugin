@@ -1,6 +1,6 @@
 {
 	"name": "eslint-plugin-safely-storage",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Use `try`...`catch` for Web Storage API for increase safety",
 	"keywords": [
 		"eslint",
