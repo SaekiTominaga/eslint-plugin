@@ -2,7 +2,6 @@
 	"name": "eslint-plugin",
 	"type": "module",
 	"scripts": {
-		"format": "prettier -w .",
 		"lint": "eslint packages/*/src/**/*.ts *.{js,mjs}"
 	},
 	"devDependencies": {
