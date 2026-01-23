@@ -1,6 +1,10 @@
 {
 	"name": "eslint-plugin",
+	"private": true,
 	"type": "module",
+	"workspaces": [
+		"packages/*"
+	],
 	"scripts": {
 		"lint": "eslint packages/*/src/**/*.ts *.{js,mjs}"
 	},
@@ -12,9 +16,5 @@
 		"rimraf": "^6.1.2",
 		"typescript": "^5.9.3",
 		"typescript-eslint": "^8.48.1"
-	},
-	"private": true,
-	"workspaces": [
-		"packages/*"
-	]
+	}
 }
