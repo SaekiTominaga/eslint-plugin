@@ -20,7 +20,7 @@
 		"@w0s/tsconfig": "3.2.2",
 		"concurrently": "10.0.5",
 		"oxfmt": "0.70.0",
-		"oxlint": "1.80.0",
+		"oxlint": "1.85.0",
 		"oxlint-tsgolint": "7.0.2003",
 		"publint": "0.3.24",
 		"rimraf": "6.1.3",
